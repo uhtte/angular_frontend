@@ -73,7 +73,7 @@ export class AnalyzerComponent implements OnInit {
     var vm = this;
     vm.isLoading = true;
 
-    var api_url = 'https://be.aipowered.kro.kr:7777/api/v1/file'
+    var api_url = 'https://port-0-flask-backend-1ih8d2gld35pw9g.gksl2.cloudtype.app/api/v1/file'
     var formData = new FormData();
     formData.append("attached", file);
     $.ajax({
