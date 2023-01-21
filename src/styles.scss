@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+/*
+  background-image: linear-gradient(45deg, #F0F0F0 25%, transparent 25%, transparent 75%, #F0F0F0 75%, #F0F0F0), linear-gradient(45deg, #F0F0F0 25%, transparent 25%, transparent 75%, #F0F0F0 75%, #F0F0F0);
+  background-size:20px 20px;
+  background-position:0 0, 10px 10px;
+*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;    
+}
+
+* { margin:0; padding:0; }

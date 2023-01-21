@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "example-angular": {
+    "myApp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -40,8 +40,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "example-angular:build:production"
+              "browserTarget": "myApp:build:production"
             },
             "development": {
-              "browserTarget": "example-angular:build:development"
+              "browserTarget": "myApp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,29 +83,14 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "example-angular:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
-            "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
-            "scripts": []
+            "browserTarget": "myApp:build"
           }
         }
       }
     }
   },
-  "defaultProject": "example-angular"
+  "defaultProject": "myApp",
+  "cli": {
+    "analytics": false
+  }
 }
